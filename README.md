@@ -165,4 +165,6 @@ ls ~/.claude/skills/
 
 ## License
 
-This configuration is provided as-is. Claude Code is subject to [Anthropic's terms of service](https://www.anthropic.com/legal/commercial-terms).
+MIT License - see [LICENSE](LICENSE) file.
+
+Claude Code itself is subject to [Anthropic's terms of service](https://www.anthropic.com/legal/commercial-terms).
