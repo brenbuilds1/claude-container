@@ -7,7 +7,7 @@ A secure Docker container for running [Claude Code](https://www.npmjs.com/packag
 - **Claude Code v2.0.64** - Specific version pinned for stability
 - **Browser OAuth** - Click the URL to log in with your Claude.ai account
 - **Non-root execution** - Runs as unprivileged `node` user (UID 1000)
-- **Host isolation** - Container cannot gain root access to your host system
+- **Host isolation** - The container runs as an unprivileged user and cannot escalate to root. However, it has full read/write access to the mounted workspace directory  
 - **awesome-claude-skills** - 24+ pre-installed skills from [ComposioHQ](https://github.com/ComposioHQ/awesome-claude-skills)
 - **Persistent config** - Authentication and settings survive container restarts
 - **Dev tools included** - git, gh CLI, fzf, zsh, Python 3, and more
