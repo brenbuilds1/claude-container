@@ -1,0 +1,143 @@
+# =============================================================================
+# Claude Code Development Container - .dockerignore
+# =============================================================================
+# Prevents sensitive files and unnecessary files from being included in
+# Docker build context (and thus the Docker image)
+# =============================================================================
+
+# =============================================================================
+# SECURITY - Credentials and Secrets (CRITICAL)
+# =============================================================================
+
+# Environment files
+.env
+.env.*
+*.env
+.envrc
+
+# Claude Code configuration (may contain API keys)
+.claude.json
+.claude/
+claude-config/
+*.claude-credentials
+
+# API keys and tokens
+*.key
+*.keys
+api_key*
+api-key*
+apikey*
+*.secret
+*.secrets
+secrets/
+.secrets
+secret.json
+secrets.json
+credentials.json
+auth.json
+token.json
+tokens.json
+
+# SSH keys and certificates
+.ssh/
+id_rsa*
+id_dsa*
+id_ecdsa*
+id_ed25519*
+*.pem
+*.ppk
+*.p12
+*.pfx
+*.crt
+*.cer
+*.cert
+
+# Cloud credentials
+.aws/
+.azure/
+.gcp/
+*.json.enc
+gcp-credentials*.json
+service-account*.json
+
+# =============================================================================
+# GIT
+# =============================================================================
+
+.git/
+.gitignore
+.gitattributes
+
+# =============================================================================
+# DOCUMENTATION (not needed in image)
+# =============================================================================
+
+README.md
+CHANGELOG.md
+LICENSE
+LICENSE.md
+CONTRIBUTING.md
+docs/
+*.md
+!SKILL.md
+
+# =============================================================================
+# DEVELOPMENT FILES
+# =============================================================================
+
+# IDE and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.iml
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build artifacts (we build fresh in container)
+build/
+dist/
+coverage/
+.nyc_output/
+
+# Test files
+test/
+tests/
+__tests__/
+*.test.js
+*.test.ts
+*.spec.js
+*.spec.ts
+
+# =============================================================================
+# OS FILES
+# =============================================================================
+
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# =============================================================================
+# PROJECT SPECIFIC
+# =============================================================================
+
+# Workspace (mounted at runtime)
+workspace/
+
+# Command history
+commandhistory/
+
+# Local overrides
+*.local
+*.local.*
+
+# Makefile (not needed inside container)
+# Uncomment if you don't want Makefile in the image:
+# Makefile
+
