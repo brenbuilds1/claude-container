@@ -94,6 +94,17 @@ To use a skill, just describe what you want:
 "Analyze this meeting transcript"
 ```
 
+### Adding Official Anthropic Skills
+
+You can also install Anthropic's official skills (document creation, enterprise workflows) from inside Claude Code:
+
+```
+/plugin marketplace add anthropics/skills
+/plugin install document-skills@anthropic-agent-skills
+```
+
+See [anthropics/skills](https://github.com/anthropics/skills) for more details.
+
 ## Workspace
 
 The **current directory** (where you run `make`) is mounted at `/workspace` inside the container.
@@ -160,7 +171,8 @@ ls ~/.claude/skills/
 
 - [Claude Code npm package](https://www.npmjs.com/package/@anthropic-ai/claude-code) (v2.0.64)
 - [Claude Code Documentation](https://code.claude.com/docs/en/overview)
-- [awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills)
+- [awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) - Community skills (pre-installed)
+- [anthropics/skills](https://github.com/anthropics/skills) - Official Anthropic skills
 - [Anthropic](https://www.anthropic.com)
 
 ## License
